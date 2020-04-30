@@ -9,18 +9,37 @@
 <body>
     <h1>Exercice 2</h1>
     <p>A l'aide d'une boucle afficher tous les nombre de 0 à 100. Pour chaque multiples de 15, les remplacer par '...'</p>
-    <p id="numbers"></p>
+    <button type="button" id="myButton">+</button>
+    <div id="numbers"></div>
 
     <script>
-        
-        for (n = 0; n <= 100; n++) {
-                if (n % 15 === 0) {
-                    let n = '...'
-                    numbers.innerHTML = `${numbers.innerHTML} ${n}`;
+        myButton.addEventListener('click', function() {
+            
+            for (n = 0; n <= 100; n++) {
+                let myP = document.createElement('p');
+                numbers.appendChild(myP);
+                console.log(n)
+                
+                if (n % 15 == 0) {
+                    let n = '...';
+                    myP.innerText = n;
+                    console.log(n)
                 } else {
-                    numbers.innerHTML = `${numbers.innerHTML} ${n}`;
+                    myP.innerText = n;
+                    console.log(n)
                 }
-        }
+            } 
+                
+        })
+
+        // for (n = 0; n <= 100; n++) {
+        //         if (n % 15 === 0) {
+        //             let n = '...'
+        //             numbers.innerHTML = `${numbers.innerHTML} ${n}`;
+        //         } else {
+        //             numbers.innerHTML = `${numbers.innerHTML} ${n}`;
+        //         }
+        // }
 
     </script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

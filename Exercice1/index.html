@@ -12,14 +12,12 @@
     <p id="years"></p>
 
     <script>
-        
+
         for (y = 2020; y <= 2030; y++) {
                 
                 if (y % 4 === 0) {
-                    console.log(y)
                     years.innerHTML = `${years.innerHTML} <p class="text-danger m-0 p-0"> ${y} </p>`;
                 } else {
-                    console.log(y)
                     years.innerHTML = `${years.innerHTML} <p class="text-dark m-0 p-0"> ${y} </p>`;
                 }
         }
